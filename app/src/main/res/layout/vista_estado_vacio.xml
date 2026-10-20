@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estado vacío / sin conexión / sin resultados: ícono + mensaje + acción -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/estadoVacio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="40dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/imgEstado"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_circulo_tonal"
+        android:importantForAccessibility="no"
+        android:padding="24dp"
+        android:src="@drawable/ic_shopping_bag"
+        app:tint="@color/melne_primary" />
+
+    <TextView
+        android:id="@+id/tvEstadoTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/playfair"
+        app:fontFamily="@font/playfair"
+        android:gravity="center"
+        android:textColor="@color/melne_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Tu carrito está vacío" />
+
+    <TextView
+        android:id="@+id/tvEstadoMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/melne_text_secondary"
+        android:textSize="14sp"
+        tools:text="Explora el catálogo y añade tus fragancias favoritas." />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEstadoAccion"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:visibility="gone"
+        tools:text="Ver catálogo"
+        tools:visibility="visible" />
+</LinearLayout>

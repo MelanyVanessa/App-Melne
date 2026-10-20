@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Degradado azul noche: hace legible el texto del banner sobre la foto -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="0"
+        android:centerX="0.5"
+        android:centerColor="#800B1420"
+        android:endColor="#000B1420"
+        android:startColor="#E60B1420" />
+</shape>

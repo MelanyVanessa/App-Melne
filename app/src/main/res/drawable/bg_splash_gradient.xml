@@ -3,8 +3,8 @@
     <gradient
         android:type="radial"
         android:gradientRadius="400dp"
-        android:startColor="#F0F9FF"
-        android:endColor="#FFFFFF"
+        android:startColor="@color/melne_surface_container"
+        android:endColor="@color/melne_background"
         android:centerX="0.5"
         android:centerY="0.5" />
 </shape>

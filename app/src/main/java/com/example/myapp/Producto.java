@@ -1,82 +1,149 @@
 package com.example.myapp;
 
+import com.google.firebase.database.Exclude;
+
+import java.util.Map;
+
 public class Producto {
-    private String Nombre;
-    private String Marca;
-    private String Categoria;
-    private String Precio;
-    private String Stock;
-    private String Tamaño;
-    private String TipoReplica;
+
+    private String id;
+    private String nombre;
+    private String marca;
+    private String categoria;
+    private String genero;
+    private long precio;
+    private int stock;
+    private String tamano;
+    private String tipoReplica;
+    private String imagenUrl;
 
     public Producto() {
-        // Constructor vacío requerido por Firebase Realtime Database
+
     }
 
-    public Producto(String Nombre, String Marca, String Categoria, String Precio, String Stock, String Tamaño, String TipoReplica) {
-        this.Nombre = Nombre;
-        this.Marca = Marca;
-        this.Categoria = Categoria;
-        this.Precio = Precio;
-        this.Stock = Stock;
-        this.Tamaño = Tamaño;
-        this.TipoReplica = TipoReplica;
+
+    public static Producto desdeMapa(String id, Map<String, Object> datos) {
+        Producto p = new Producto();
+        p.id = id;
+        if (datos == null) {
+            return p;
+        }
+        p.nombre = texto(datos.get("nombre"));
+        p.marca = texto(datos.get("marca"));
+        p.categoria = texto(datos.get("categoria"));
+        p.genero = texto(datos.get("genero"));
+        p.precio = numero(datos.get("precio"));
+        p.stock = (int) numero(datos.get("stock"));
+        String tamano = texto(datos.get("tamano"));
+        p.tamano = !tamano.isEmpty() ? tamano : texto(datos.get("tamaño"));
+        p.tipoReplica = texto(datos.get("tipoReplica"));
+        p.imagenUrl = texto(datos.get("imagenUrl"));
+        return p;
     }
 
-    //GET Y SET
+    private static String texto(Object valor) {
+        return valor == null ? "" : valor.toString().trim();
+    }
+
+    static long numero(Object valor) {
+        if (valor instanceof Number) {
+            return ((Number) valor).longValue();
+        }
+        String digitos = texto(valor).replaceAll("[^0-9]", "");
+        if (digitos.isEmpty()) {
+            return 0;
+        }
+        try {
+            return Long.parseLong(digitos);
+        } catch (NumberFormatException e) {
+            return 0;
+        }
+    }
+
+    @Exclude
+    public String getId() {
+        return id;
+    }
+
+    @Exclude
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Exclude
+    public boolean isAgotado() {
+        return stock <= 0;
+    }
+
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
-    }
-
-    public String getTipoReplica() {
-        return TipoReplica;
-    }
-
-    public void setTipoReplica(String tipoReplica) {
-        TipoReplica = tipoReplica;
-    }
-
-    public String getCategoria() {
-        return Categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        Categoria = categoria;
+        this.nombre = nombre;
     }
 
     public String getMarca() {
-        return Marca;
+        return marca;
     }
 
     public void setMarca(String marca) {
-        Marca = marca;
+        this.marca = marca;
     }
 
-    public String getPrecio() {
-        return Precio;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setPrecio(String precio) {
-        Precio = precio;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
-    public String getStock() {
-        return Stock;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setStock(String stock) {
-        Stock = stock;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    public String getTamaño() {
-        return Tamaño;
+    public long getPrecio() {
+        return precio;
     }
 
-    public void setTamaño(String tamaño) {
-        Tamaño = tamaño;
+    public void setPrecio(long precio) {
+        this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public String getTamano() {
+        return tamano;
+    }
+
+    public void setTamano(String tamano) {
+        this.tamano = tamano;
+    }
+
+    public String getTipoReplica() {
+        return tipoReplica;
+    }
+
+    public void setTipoReplica(String tipoReplica) {
+        this.tipoReplica = tipoReplica;
+    }
+
+    public String getImagenUrl() {
+        return imagenUrl;
+    }
+
+    public void setImagenUrl(String imagenUrl) {
+        this.imagenUrl = imagenUrl;
     }
 }

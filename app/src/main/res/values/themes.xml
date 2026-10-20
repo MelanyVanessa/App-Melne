@@ -1,17 +1,184 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
+    <!-- Tema Material 3 con modo claro y oscuro (DayNight). Los colores cambian
+         solos según values/colors.xml y values-night/colors.xml. -->
+    <style name="Theme.MyApp" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/melne_primary</item>
-        <item name="colorPrimaryVariant">@color/melne_primary</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+        <item name="colorOnPrimary">@color/melne_on_primary</item>
+        <item name="colorPrimaryContainer">@color/melne_surface_container</item>
+        <item name="colorOnPrimaryContainer">@color/melne_primary</item>
         <item name="colorSecondary">@color/melne_accent</item>
-        <item name="colorSecondaryVariant">@color/melne_accent</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <!-- Customize your theme here. -->
+        <item name="colorSecondaryContainer">@color/melne_chip_selected</item>
+        <item name="colorOnSecondaryContainer">@color/melne_primary</item>
+        <item name="android:colorBackground">@color/melne_background</item>
+        <item name="colorSurface">@color/melne_surface</item>
+        <item name="colorOnSurface">@color/melne_primary</item>
+        <item name="colorOnSurfaceVariant">@color/melne_text_secondary</item>
+        <item name="colorSurfaceContainerLowest">@color/melne_surface</item>
+        <item name="colorSurfaceContainerLow">@color/melne_surface</item>
+        <item name="colorSurfaceContainer">@color/melne_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/melne_surface_container</item>
+        <item name="colorSurfaceContainerHighest">@color/melne_surface_variant</item>
+        <item name="colorOutline">@color/melne_outline</item>
+        <item name="colorOutlineVariant">@color/melne_outline_variant</item>
+        <item name="colorError">@color/melne_error</item>
+        <item name="android:textColorHint">@color/melne_text_secondary</item>
+
+        <!-- Tipografía: Manrope para textos, Playfair Display para títulos -->
+        <item name="fontFamily">@font/manrope</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="textAppearanceHeadlineSmall">@style/Melne.Texto.Titulo</item>
+        <item name="textAppearanceTitleLarge">@style/Melne.Texto.Titulo</item>
+        <item name="textAppearanceBodyLarge">@style/Melne.Texto.CuerpoGrande</item>
+        <item name="textAppearanceBodyMedium">@style/Melne.Texto.Cuerpo</item>
+        <item name="textAppearanceBodySmall">@style/Melne.Texto.CuerpoPequeno</item>
+        <item name="textAppearanceLabelLarge">@style/Melne.Texto.Etiqueta</item>
+        <item name="textAppearanceLabelMedium">@style/Melne.Texto.EtiquetaMediana</item>
+        <item name="textAppearanceTitleMedium">@style/Melne.Texto.Subtitulo</item>
+        <item name="materialAlertDialogTheme">@style/Melne.Dialogo</item>
+    </style>
+
+    <style name="Melne.Texto.Titulo" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/playfair</item>
+        <item name="android:fontFamily">@font/playfair</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Melne.Texto.Subtitulo" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+    </style>
+
+    <style name="Melne.Texto.CuerpoGrande" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/manrope</item>
+        <item name="android:fontFamily">@font/manrope</item>
+    </style>
+
+    <style name="Melne.Texto.Cuerpo" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/manrope</item>
+        <item name="android:fontFamily">@font/manrope</item>
+    </style>
+
+    <style name="Melne.Texto.CuerpoPequeno" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/manrope</item>
+        <item name="android:fontFamily">@font/manrope</item>
+    </style>
+
+    <style name="Melne.Texto.Etiqueta" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+    </style>
+
+    <style name="Melne.Texto.EtiquetaMediana" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/manrope_semibold</item>
+        <item name="android:fontFamily">@font/manrope_semibold</item>
+    </style>
+
+    <style name="Melne.Dialogo" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="materialAlertDialogTitleTextStyle">@style/Melne.Dialogo.Titulo</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Melne.Dialogo.Cuerpo</item>
+    </style>
+
+    <style name="Melne.Dialogo.Titulo" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="fontFamily">@font/playfair</item>
+        <item name="android:fontFamily">@font/playfair</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Melne.Dialogo.Cuerpo" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="fontFamily">@font/manrope</item>
+        <item name="android:fontFamily">@font/manrope</item>
+    </style>
+
+    <!-- Marca "MELNE" en la barra superior -->
+    <style name="Melne.Marca" parent="">
+        <item name="android:fontFamily">@font/playfair</item>
+        <item name="fontFamily">@font/playfair</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/melne_primary</item>
+        <item name="android:letterSpacing">0.18</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!-- Etiqueta pequeña en mayúsculas (marca del producto, secciones) -->
+    <style name="Melne.Sobretitulo" parent="">
+        <item name="android:fontFamily">@font/manrope_semibold</item>
+        <item name="fontFamily">@font/manrope_semibold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/melne_text_secondary</item>
+    </style>
+
+    <!-- Título de sección -->
+    <style name="Melne.TituloSeccion" parent="">
+        <item name="android:fontFamily">@font/playfair</item>
+        <item name="fontFamily">@font/playfair</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/melne_primary</item>
+        <item name="android:accessibilityHeading" tools:targetApi="p">true</item>
+    </style>
+
+    <!-- Precio -->
+    <style name="Melne.Precio" parent="">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="fontFamily">@font/manrope_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/melne_price</item>
+    </style>
+
+    <!-- Chip de filtro M3: muestra un check al seleccionarse (no depende solo del color). -->
+    <style name="Melne.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_fondo</item>
+        <item name="android:textColor">@color/chip_texto</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="checkedIconVisible">true</item>
+        <item name="checkedIconTint">@color/melne_primary</item>
+    </style>
+
+    <!-- Campo de texto M3 con etiqueta flotante persistente -->
+    <style name="Melne.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/melne_primary</item>
+    </style>
+
+    <style name="Melne.TextInput.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/melne_primary</item>
+    </style>
+
+    <!-- Barra de navegación inferior M3 -->
+    <style name="Melne.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/melne_surface</item>
+        <item name="itemIconTint">@color/melne_primary</item>
+        <item name="itemTextColor">@color/melne_primary</item>
+        <item name="itemActiveIndicatorStyle">@style/Melne.BottomNav.Indicador</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <style name="Melne.BottomNav.Indicador" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/melne_chip_selected</item>
+    </style>
+
+    <!-- Título de pantalla (escala M3 Headline Small) marcado como encabezado para TalkBack -->
+    <style name="Melne.TituloPantalla" parent="">
+        <item name="android:fontFamily">@font/playfair</item>
+        <item name="fontFamily">@font/playfair</item>
+        <item name="android:textColor">@color/melne_primary</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:accessibilityHeading" tools:targetApi="p">true</item>
+    </style>
+
+    <!-- Botón de texto con área táctil mínima de 48dp -->
+    <style name="Melne.BotonTexto" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColor">@color/melne_accent</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Forma circular para el logo -->
+    <style name="Melne.Forma.Circulo" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        app:cardBackgroundColor="@color/melne_surface_variant"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:id="@+id/imgProducto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_producto" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/datosProducto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMarca"
+            style="@style/Melne.Sobretitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Melne" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/manrope_semibold"
+            app:fontFamily="@font/manrope_semibold"
+            android:maxLines="2"
+            android:textColor="@color/melne_primary"
+            android:textSize="16sp"
+            tools:text="Ámbar Real" />
+
+        <TextView
+            android:id="@+id/tvTamano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/melne_text_secondary"
+            android:textSize="12sp"
+            tools:text="Tamaño: 100ml" />
+
+        <TextView
+            android:id="@+id/tvPrecio"
+            style="@style/Melne.Precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            tools:text="$145.000 COP" />
+    </LinearLayout>
+
+    <!-- Selector de cantidad: botones de 48dp -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_quantity_selector"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btnMas"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_plus"
+            android:contentDescription="@string/agregar_uno"
+            app:tint="@color/melne_primary" />
+
+        <TextView
+            android:id="@+id/tvCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_bold"
+            app:fontFamily="@font/manrope_bold"
+            android:textColor="@color/melne_primary"
+            android:textSize="16sp"
+            tools:text="1" />
+
+        <ImageButton
+            android:id="@+id/btnMenos"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_minus"
+            android:contentDescription="@string/quitar_uno"
+            app:tint="@color/melne_primary" />
+    </LinearLayout>
+</LinearLayout>

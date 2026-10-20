@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "producto": {
+      ".read": true,
+      ".write": "auth != null && root.child('admins').child(auth.uid).val() === true",
+      "$id": {
+        ".validate": "newData.child('nombre').isString() && newData.child('precio').isNumber() && newData.child('precio').val() > 0"
+      }
+    },
+    "admins": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": false
+      }
+    }
+  }
+}

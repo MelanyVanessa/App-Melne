@@ -1,3 +1,246 @@
 <resources>
-    <string name="app_name">My App</string>
+    <string name="app_name">Melne</string>
+    <string name="marca_melne">MELNE</string>
+
+    <!-- Datos de contacto de la tienda: cámbialos por los reales -->
+    <string name="whatsapp_numero" translatable="false">573001234567</string>
+    <string name="whatsapp_mostrar" translatable="false">+57 300 123 4567</string>
+    <string name="instagram_usuario" translatable="false">melne.perfumes</string>
+    <string name="instagram_mostrar" translatable="false">\@melne.perfumes</string>
+    <string name="direccion_tienda">Aguachica, Cesar, Colombia</string>
+
+    <!-- Navegación -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_carrito">Carrito</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_productos">Productos</string>
+    <string name="nav_panel">Panel</string>
+    <string name="nav_tienda">Tienda</string>
+
+    <!-- General -->
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="volver">Volver</string>
+    <string name="buscar">Buscar</string>
+    <string name="carrito">Carrito</string>
+    <string name="error_sin_app">No hay una aplicación para abrir este enlace</string>
+    <string name="error_cargar_productos">No se pudieron cargar los productos: %1$s</string>
+    <string name="sin_resultados">No hay productos que coincidan</string>
+    <string name="buscar_fragancias">Buscar fragancias premium…</string>
+
+    <!-- Filtros -->
+    <string name="filtro_todos">Todos</string>
+    <string name="filtro_nuevos">Nuevos</string>
+    <string name="filtro_activos">Activos</string>
+    <string name="filtro_agotados">Agotados</string>
+    <string name="genero">Género</string>
+    <string name="genero_hombre">Hombre</string>
+    <string name="genero_mujer">Mujer</string>
+    <string name="genero_unisex">Unisex</string>
+
+    <!-- Inicio -->
+    <string name="home_banner_titulo">Descubre tu esencia</string>
+    <string name="home_banner_subtitulo">Fragancias Triple A &amp; 1:1 de Lujo</string>
+    <string name="home_seccion_titulo">Nuestro catálogo</string>
+    <string name="ver_todos">Ver todos</string>
+    <string name="catalogo_vacio">Aún no hay productos en el catálogo</string>
+    <string name="agotado">Agotado</string>
+    <string name="agregado_al_carrito">%1$s añadido al carrito</string>
+    <string name="sin_stock_suficiente">No hay más unidades disponibles</string>
+
+    <!-- Carrito -->
+    <string name="carrito_vacio">Tu carrito está vacío</string>
+    <string name="vaciar">Vaciar</string>
+    <string name="confirmar_vaciar">¿Quieres vaciar el carrito?</string>
+    <string name="tamano_formato">Tamaño: %1$s</string>
+    <string name="agregar_uno">Agregar una unidad</string>
+    <string name="quitar_uno">Quitar una unidad</string>
+
+    <!-- Perfil -->
+    <string name="acerca_titulo">Sobre Melne Boutique</string>
+    <string name="acerca_mensaje">Melne es una boutique de fragancias Triple A y 1:1 en Aguachica, Cesar. Hacemos entregas el mismo día en Aguachica y envíos nacionales.</string>
+    <string name="version_formato">Melne v%1$s • Aguachica</string>
+
+    <!-- Login -->
+    <string name="login_titulo">Acceso administrador</string>
+    <string name="login_subtitulo">Ingresa con la cuenta de administrador de la tienda</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="ingresando">Ingresando…</string>
+    <string name="error_correo_requerido">Escribe tu correo</string>
+    <string name="error_clave_requerida">Escribe tu contraseña</string>
+    <string name="error_login">Correo o contraseña incorrectos</string>
+    <string name="error_no_admin">Esta cuenta no tiene permisos de administrador</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+
+    <!-- Admin: productos -->
+    <string name="agregar_producto">Agregar producto</string>
+    <string name="admin_sin_productos">Agrega tu primer producto para que aparezca en la tienda.</string>
+
+    <!-- Admin: panel -->
+    <string name="panel_admin_titulo">Panel de Admin</string>
+    <string name="ver_productos">Ver mis productos</string>
+    <string name="sin_dato">—</string>
+    <string name="stat_productos">Productos</string>
+    <string name="stat_activos">Con stock</string>
+    <string name="stat_agotados">Agotados</string>
+    <string name="stat_inventario">Valor del inventario</string>
+    <string name="stock_bajo_titulo">Stock bajo</string>
+    <string name="stock_bajo_detalle">Productos con 3 unidades o menos</string>
+    <string name="stock_bajo_vacio">Ningún producto tiene stock bajo</string>
+    <plurals name="stock_bajo_fila">
+        <item quantity="one">%1$s · queda %2$d unidad</item>
+        <item quantity="other">%1$s · quedan %2$d unidades</item>
+    </plurals>
+    <string name="confirmar_cerrar_sesion">¿Quieres cerrar la sesión de administrador?</string>
+    <string name="datos_prueba_titulo">Catálogo de ejemplo</string>
+    <string name="datos_prueba_detalle">Solo en la versión de prueba. Carga 20 referencias (10 de hombre y 10 de mujer) con fotos de Pexels.</string>
+    <string name="datos_prueba_boton">Cargar catálogo de ejemplo</string>
+    <string name="datos_prueba_confirmar">Se borrarán TODOS los productos actuales y se reemplazarán por las 20 referencias de ejemplo. ¿Continuar?</string>
+    <string name="datos_prueba_reemplazar">Reemplazar</string>
+    <string name="datos_prueba_listo">Catálogo de ejemplo cargado</string>
+    <string name="stock_activo">Stock: %1$d  •  Activo</string>
+    <string name="stock_agotado">Stock: %1$d  •  Agotado</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="eliminar_producto">Eliminar producto</string>
+    <string name="confirmar_eliminar">¿Eliminar \"%1$s\" del catálogo? Podrás deshacerlo durante unos segundos.</string>
+    <string name="producto_eliminado">Producto eliminado</string>
+    <string name="error_eliminar">No se pudo eliminar: %1$s</string>
+
+    <!-- Admin: formulario -->
+    <string name="nuevo_producto">Nuevo Producto</string>
+    <string name="editar_producto">Editar Producto</string>
+    <string name="guardar">Guardar</string>
+    <string name="guardando">Guardando…</string>
+    <string name="producto_guardado">Producto guardado correctamente</string>
+    <string name="producto_no_existe">El producto ya no existe</string>
+    <string name="error_guardar">Error al guardar: %1$s</string>
+    <string name="error_procesar_imagen">No se pudo procesar la imagen: %1$s</string>
+    <string name="error_nombre_requerido">Escribe el nombre del producto</string>
+    <string name="error_precio_requerido">Escribe el precio en pesos, solo números (ej. 150000)</string>
+
+    <!-- Textos de pantallas -->
+    <string name="mis_productos">Mis Productos</string>
+    <string name="tu_carrito">Tu carrito</string>
+    <string name="envio_local_titulo">Envío local en Aguachica, Cesar</string>
+    <string name="envio_local_detalle">Entregas el mismo día o envío nacional rápido.</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="envio_aguachica">Envío (Aguachica)</string>
+    <string name="total_estimado">Total estimado</string>
+    <string name="pedir_por_whatsapp">Realizar pedido por WhatsApp</string>
+    <string name="subir_imagen">Subir Imagen del Producto</string>
+    <string name="subir_imagen_detalle">Toca para elegir una foto</string>
+    <string name="nombre_producto">Nombre del producto</string>
+    <string name="hint_nombre">Ej. Sauvage Elixir</string>
+    <string name="marca">Marca</string>
+    <string name="hint_marca">Ej. Dior</string>
+    <string name="categoria">Categoría</string>
+    <string name="tamano">Tamaño</string>
+    <string name="tipo_replica">Tipo</string>
+    <string name="ciudad_tienda">Aguachica, Cesar</string>
+    <string name="direccion_envio">Dirección de Envío</string>
+    <string name="contactar_whatsapp">Contactar por WhatsApp</string>
+    <string name="seguir_instagram">Seguir en Instagram</string>
+    <string name="acerca_resumen">Aromas de lujo Triple A &amp; 1:1</string>
+    <string name="splash_lema">PERFUMES &amp; ESENCIAS</string>
+    <string name="splash_calidad">PREMIUM REPLICA AAA &amp; 1.1</string>
+
+    <!-- Rediseño: inicio, detalle, carrito y perfil -->
+    <string name="home_lema">Perfumería · Aguachica</string>
+    <string name="home_banner_sobretitulo">Colección Melne</string>
+    <plurals name="fragancias_conteo">
+        <item quantity="one">%1$d fragancia</item>
+        <item quantity="other">%1$d fragancias</item>
+    </plurals>
+    <string name="anadir_producto_al_carrito">Añadir %1$s al carrito</string>
+    <string name="ficha_producto">%1$s, %2$s, %3$s</string>
+    <string name="ficha_agotada">%1$s, %2$s, %3$s, agotado</string>
+    <string name="error_catalogo_titulo">No pudimos cargar el catálogo</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="sin_conexion_titulo">Sin conexión a internet</string>
+    <string name="sin_conexion_mensaje">Conéctate a una red Wi-Fi o datos móviles para ver el catálogo.</string>
+    <string name="sin_conexion_aviso">Sin conexión. Mostrando la información guardada.</string>
+    <string name="ver_carrito">Ver carrito</string>
+    <string name="catalogo_vacio_titulo">Muy pronto, nuevas fragancias</string>
+    <string name="escribenos_whatsapp">Escríbenos por WhatsApp</string>
+    <string name="whatsapp_consulta_catalogo">Hola Melne, quiero conocer las fragancias disponibles.</string>
+    <string name="sin_resultados_mensaje">Prueba con otro nombre o quita los filtros.</string>
+    <string name="limpiar_filtros">Limpiar filtros</string>
+    <string name="preguntar_whatsapp">Preguntar por WhatsApp</string>
+    <string name="anadir_al_carrito">Añadir al carrito</string>
+    <string name="detalle_envio">Entrega el mismo día en Aguachica y envíos a todo el país.</string>
+    <string name="whatsapp_consulta_producto">Hola Melne, quiero información sobre %1$s (%2$s).</string>
+    <string name="foto_de">Foto de %1$s</string>
+    <string name="no_disponible">Agotado por ahora</string>
+    <plurals name="disponible_unidades">
+        <item quantity="one">Disponible · queda %1$d unidad</item>
+        <item quantity="other">Disponible · %1$d unidades</item>
+    </plurals>
+    <plurals name="carrito_badge">
+        <item quantity="one">%1$d producto en el carrito</item>
+        <item quantity="other">%1$d productos en el carrito</item>
+    </plurals>
+    <plurals name="cantidad_de">
+        <item quantity="one">%1$d unidad de %2$s</item>
+        <item quantity="other">%1$d unidades de %2$s</item>
+    </plurals>
+    <string name="agregar_uno_de">Agregar una unidad de %1$s</string>
+    <string name="quitar_uno_de">Quitar una unidad de %1$s</string>
+    <string name="quitar_del_carrito">Quitar %1$s del carrito</string>
+    <string name="quitado_del_carrito">%1$s se quitó del carrito</string>
+    <string name="deshacer">Deshacer</string>
+    <string name="vaciar_carrito">Vaciar carrito</string>
+    <string name="carrito_vacio_mensaje">Explora el catálogo y añade tus fragancias favoritas.</string>
+    <string name="ver_catalogo">Ver catálogo</string>
+    <string name="perfil_titulo">Melne</string>
+    <string name="perfil_subtitulo">Perfumería · Aguachica, Cesar</string>
+    <string name="perfil_seccion_contacto">Contacto</string>
+    <string name="perfil_seccion_tienda">La tienda</string>
+    <string name="acceso_admin">Acceso administrador</string>
+    <string name="acceso_admin_detalle">Gestiona productos e inventario</string>
+
+    <!-- Formularios -->
+    <string name="requerido">Obligatorio</string>
+    <string name="precio">Precio</string>
+    <string name="stock">Stock</string>
+    <string name="elegir_foto">Elegir foto del producto</string>
+    <string name="descartar_cambios_titulo">¿Descartar cambios?</string>
+    <string name="descartar_cambios_mensaje">Tienes cambios sin guardar en este producto.</string>
+    <string name="descartar">Descartar</string>
+    <string name="seguir_editando">Seguir editando</string>
+    <string name="error_guardar_sin_conexion">Sin conexión. Conéctate a internet para guardar el producto.</string>
+    <string name="error_correo_invalido">Escribe un correo válido, por ejemplo nombre@correo.com</string>
+    <string name="error_sin_conexion_login">Sin conexión. Revisa tu internet e inténtalo de nuevo.</string>
+    <string name="editar_producto_de">Editar %1$s</string>
+    <string name="eliminar_producto_de">Eliminar %1$s</string>
+    <string name="admin_sin_productos_titulo">Tu catálogo está vacío</string>
+
+    <string name="apariencia">Apariencia</string>
+    <string-array name="temas">
+        <item>Claro</item>
+        <item>Oscuro</item>
+        <item>Según el sistema</item>
+    </string-array>
+
+    <string-array name="categorias">
+        <item>Perfumería</item>
+        <item>Cuidado Personal</item>
+        <item>Cosméticos</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="generos">
+        <item>@string/genero_hombre</item>
+        <item>@string/genero_mujer</item>
+        <item>@string/genero_unisex</item>
+    </string-array>
+
+    <string-array name="tipos_replica">
+        <item>Calidad 1:1</item>
+        <item>Triple A</item>
+        <item>Tester</item>
+        <item>Original</item>
+    </string-array>
 </resources>

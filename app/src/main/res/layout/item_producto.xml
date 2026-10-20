@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ficha de producto en la cuadrícula del catálogo (2 columnas) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fichaProducto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImagen"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/melne_surface_variant"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintDimensionRatio="4:5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp">
+
+            <ImageView
+                android:id="@+id/imgProducto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_producto" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Insignia de agotado: texto, no solo color -->
+        <TextView
+            android:id="@+id/tvAgotado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/bg_insignia"
+            android:elevation="2dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="@string/agotado"
+            android:textColor="@color/melne_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/cardImagen"
+            app:layout_constraintTop_toTopOf="@id/cardImagen"
+            tools:visibility="visible" />
+
+        <!-- Botón añadir: 48dp de área táctil -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAgregar"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_add"
+            app:iconSize="24dp"
+            app:iconTint="@color/melne_on_primary"
+            app:layout_constraintBottom_toBottomOf="@id/cardImagen"
+            app:layout_constraintEnd_toEndOf="@id/cardImagen"
+            tools:contentDescription="Añadir al carrito" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvMarca"
+        style="@style/Melne.Sobretitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="4dp"
+        tools:text="Melne" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/manrope_semibold"
+        app:fontFamily="@font/manrope_semibold"
+        android:maxLines="2"
+        android:paddingHorizontal="4dp"
+        android:textColor="@color/melne_primary"
+        android:textSize="16sp"
+        tools:text="Ámbar Real" />
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        style="@style/Melne.Precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="4dp"
+        tools:text="$145.000 COP" />
+</LinearLayout>

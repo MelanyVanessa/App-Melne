@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Roles de color Melne (tema oscuro) -->
+    <color name="melne_background">#121417</color>
+    <color name="melne_surface">#121417</color>
+    <color name="melne_surface_container">#1C2733</color>
+    <color name="melne_surface_variant">#23292F</color>
+    <color name="melne_primary">#C8DCF0</color>
+    <color name="melne_on_primary">#10202F</color>
+    <color name="melne_text_secondary">#AEB7C0</color>
+    <color name="melne_price">#B8C4FF</color>
+    <color name="melne_accent">#8FD3F5</color>
+    <color name="melne_chip_selected">#2B4C5E</color>
+    <color name="melne_chip_unselected">#23292F</color>
+    <color name="melne_outline">#8C96A1</color>
+    <color name="melne_outline_variant">#343B43</color>
+    <color name="melne_error">#F2B8B5</color>
+
+    <color name="status_pending_text">#FFB870</color>
+    <color name="status_delivered_text">#81C995</color>
+</resources>

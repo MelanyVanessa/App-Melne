@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Melne Custom Colors -->
+    <!-- Roles de color Melne (tema claro). La versión oscura está en values-night/colors.xml.
+         Todas las combinaciones de texto cumplen contraste WCAG AA (mínimo 4.5:1). -->
     <color name="melne_background">#FFFFFF</color>
+    <color name="melne_surface">#FFFFFF</color>
+    <color name="melne_surface_container">#EEF5FC</color>
+    <color name="melne_surface_variant">#F3F4F6</color>
     <color name="melne_primary">#2C3E50</color>
-    <color name="melne_accent">#87CEEB</color>
-    <color name="melne_chip_selected">#ADD8E6</color>
-    <color name="melne_chip_unselected">#F5F5F5</color>
-    <color name="melne_text_secondary">#8E8E8E</color>
+    <color name="melne_on_primary">#FFFFFF</color>
+    <color name="melne_text_secondary">#5B6670</color>
     <color name="melne_price">#1A237E</color>
-    <color name="melne_card_bg">#FFFFFF</color>
+    <color name="melne_accent">#0A6694</color>
+    <color name="melne_chip_selected">#BFE3F0</color>
+    <color name="melne_chip_unselected">#F3F4F6</color>
+    <color name="melne_outline">#7A8590</color>
+    <color name="melne_outline_variant">#E3E7EB</color>
+    <color name="melne_error">#B3261E</color>
 
-    <!-- Admin Panel Colors -->
-    <color name="status_pending_bg">#FFF8E1</color>
-    <color name="status_pending_text">#F57C00</color>
-    <color name="status_shipped_bg">#E3F2FD</color>
-    <color name="status_shipped_text">#1976D2</color>
-    <color name="status_delivered_bg">#E8F5E9</color>
-    <color name="status_delivered_text">#388E3C</color>
-    <color name="chart_bar_default">#2C3E50</color>
-    <color name="chart_bar_highlight">#87CEEB</color>
+    <!-- Estados -->
+    <color name="status_pending_text">#A04A00</color>
+    <color name="status_delivered_text">#2E7D32</color>
 </resources>
